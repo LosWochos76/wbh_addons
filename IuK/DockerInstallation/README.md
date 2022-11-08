@@ -7,20 +7,20 @@
 
 3. Starten Sie Docker Desktop durch Doppelklick auf die Verknüpfung auf dem Desktop. Eventuell werden Sie aufgefordert, Komponten nachzuinstallieren. Folgen Sie diesen Anweisungen und starten dann den Rechner neu.
 
-4. Erstellen Sie ein Verzeichnis *Docker* auf Ihrem Desktop.
+4. Erstellen Sie ein Verzeichnis *Postgis* auf Ihrem Desktop.
 
 5. Laden Sie die Datei [docker-compose.yaml](https://raw.githubusercontent.com/LosWochos76/wbh_addons/main/IuK/DockerInstallation/docker-compose.yml) herunter und speichern Sie die Datei in dem zuvor erstellten Verzeichnis. Im Web-Browser können Sie dazu mit der rechten Maustaste auf den Inhalt klicken und "Speichern unter..." auswählen.
 
 6. Öffnen Sie die Kommandozeile. Unter Windows 10/11 klicken Sie dazu den Start-Button und suchen nach "cmd": <br> ![cmd](./3-cmd.png) <br> Klicken Sie das  Programm "Eingabeaufforderung" an. Es öffnet sich ein neues Fenster mit schwarzem Hintergrund und einem weiß blinkenden Cursor. 
 
-7. Wechseln Sie in das zuvor erstellte Verzeichnis. Dazu geben Sie den Befehl ```cd Desktop\Docker``` ein und bestätigen mit der Enter-Taste. Anschließend können Sie sich den Inhalt des aktuellen Verzeichnisses mit dem Befehl ```dir``` anzeigen. Das Ergebnis sollte wie folgt aussehen: <br> ![Eingabeaufforderung](./2-eingabeaufforderung.png) 
+7. Wechseln Sie in das zuvor erstellte Verzeichnis. Dazu geben Sie den Befehl ```cd Desktop\Postgis``` ein und bestätigen mit der Enter-Taste. Anschließend können Sie sich den Inhalt des aktuellen Verzeichnisses mit dem Befehl ```dir``` anzeigen. Das Ergebnis sollte wie folgt aussehen: <br> ![Eingabeaufforderung](./2-eingabeaufforderung.png) 
 
 8. Mitunter hat die Datei *docker-compose.yml* noch die Dateiendung ".txt". Dann müsste die Datei noch umbenannt werden. Dies geschieht auf der Kommandozeile mit dem Befehl:<br>
 ```ren docker-compose.yml.txt docker-compose.yml```.
 
 9. Prüfen Sie, ob Docker Desktop gestartet ist. Der Kommandozeilenbefehl ```docker ps```sollte eine leere Liste ausgeben: <br> ![leere Liste](./5-docker-ps.png)
 
-10. Starten Sie nun PostGIS und pgAdmin mit dem Befehl ```docker compose up -d```. Daraufhin werden zuerst einige Container heruntergeladen und anschließend gestartet: <br> ![Container gestartet](./6-container-gestartet.png)
+10. Starten Sie nun PostGIS und pgAdmin mit dem Befehl ```docker compose up -d```. Nur beim ersten Mal werden zuerst einige Container heruntergeladen. Anschließend werden die Anwendungen gestartet: <br> ![Container gestartet](./6-container-gestartet.png)
 
 11. In Ihrem Web-Broswer können Sie sich nun unter http://localhost:8080 in pgAdmin einloggen. Der Benutzername ist "admin@wb-fernstudium.de". Das Passwort lautet "secret". Das Ergebnis sollte wie folgt aussehen: <br> ![pgAdmin](./7-pgadmin.png)
 
