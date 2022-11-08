@@ -24,8 +24,8 @@
 
 11. In Ihrem Web-Broswer können Sie sich nun unter http://localhost:8080 in pgAdmin einloggen. Der Benutzername ist "admin@wb-fernstudium.de". Das Passwort lautet "secret". Das Ergebnis sollte wie folgt aussehen: <br> ![pgAdmin](./7-pgadmin.png)
 
-12. Beim ersten einloggen kennt pgAdmin noch keinen Datenbankserver. Dieser muss erst angelegt werden. Klicken Sie im Menü von pgAdmin dazu auf "Object --> Register --> Server". Geben Sie unter "Name" einen Namen ein,z.B. "postgres". Im Reiter "Connection" müssen einige Parameter eingetragen werden. Unter "Host" muss "postgres" eingetragen werden. Unter "Username" ebenfalls "postgres" und unter "Password" der Wert "secret". Das Ergebnis sollte wie folgt aussehen: <br> ![pgAdmin Verbindung](./8-pgadmin-verbindung.png)
+12. Nur beim allerersten Einloggen kennt pgAdmin noch keinen Datenbankserver. Dieser muss dann einmalig angelegt werden. Klicken Sie im Menü von pgAdmin dazu auf "Object --> Register --> Server". Geben Sie unter "Name" einen Namen ein, z.B. "postgres". Im Reiter "Connection" müssen einige Parameter eingetragen werden. Unter "Host" muss "postgres" eingetragen werden. Unter "Username" ebenfalls "postgres" und unter "Password" der Wert "secret". Das Ergebnis sollte wie folgt aussehen: <br> ![pgAdmin Verbindung](./8-pgadmin-verbindung.png)
 
 13. Nach dem Speichern der Verbindungsdaten sollte im linken Bereich des Fensters der neue Server zu sehen sein. Dazu kann man den Baum aufklappen und den Server anklicken. Im Menü von pgAdmin kann man nun unter das Query-Tool aufrufen "Tools --> Query Tool". In dem sich öffnenden Fenster kann man beliebige SQL-Befehle an die Datenbank absetzen. Die Datenbank ist nun einsatzbereit: <br> ![Query Tool](./9-query-tool.png)
 
-14. 
+14. Wenn Sie den Rechner herunterfahren, wird die Datenbank ebenfalls gestoppt. Wenn Sie das nächste Mal die Datenbank neu starten wollen, müssen Sie lediglich Docker Desktop starten und Schritt 10 durchführen. Danach sollten Sie sich im Web-Browser wieder in pgAdmin einloggen können.
