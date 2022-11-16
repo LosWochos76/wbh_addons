@@ -21,6 +21,28 @@ services:
     volumes:
       - pgadmin-config:/var/lib/pgadmin/
 
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    volumes:
+      - influx-data:/var/lib/influxdb2
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    links:
+      - influxdb
+    volumes:
+      - grafana-data:/var/lib/grafana 
+
 volumes:
   postgres-data:
   pgadmin-config:
+  influx-data:
+  grafana-data:
+
+  
