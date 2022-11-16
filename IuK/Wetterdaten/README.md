@@ -10,7 +10,7 @@
 
 5. Nach erfolgreicher Installation von Python können Sie im Startmenü von Windows das Wort "miniconda" eingeben. Es sollte dann der Eintrag "Miniconda Prompt" angezeigt werden. Durch Klicken auf den Eintrag öffnet sich ein Fenster mit schwarzem Hintergrund und weiß blinkendem Cursor.
 
-6. Wechseln Sie in das Verzeichnis *Wetterdaten*. Dazu nutzen Sie den Befehl ```cd Desktop\Wetterdaten```. Zur Kontrolle können Sie sich den Inhalt des Verzeichnisses ansehen. Dies geschieht mit dem Befehl ```dir```. Das Ergebnis sollte wie folgt aussehen: <br> ![Konsole](./1-konsole.png)
+6. Wechseln Sie in das Verzeichnis *Wetterdaten*. Dazu nutzen Sie den Befehl ```cd Desktop\Wetterdaten```. Zur Kontrolle können Sie sich den Inhalt des Verzeichnisses ansehen. Dies geschieht mit dem Befehl ```dir```. Das Ergebnis sollte wie folgt aussehen: <br> ![Konsole](./1-console.png)
 
 7. Sollte die Datei *import.py* eine Dateiendung *.txt* besitzen, müssen Sie die Datei noch umbenennen. Die geschieht über den folgenden Befehl: ```ren import.py.txt import.py```
 
