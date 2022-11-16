@@ -21,5 +21,5 @@
 - ```conda install -c conda-forge psycopg2```<br><br>
 Rückfragen können mit "y" (yes) beantwortet werden.
 
-9. Nun kann das eigentliche Import-Script gestartet werden. Dazu wird der folgende Befehl ausgeführt: ```python import.py```. Das Herunterladen und der Import in die Datenbank dauern eine Weile. Nach erfolgreichem Import sollten Sie in pgAdmin die beiden neuen Tabellen *Wetterstationen* und *Wetterdaten* sehen und mithilfe von SQL abfragen können.
+9. Nun kann das eigentliche Import-Script gestartet werden. Dazu wird der folgende Befehl ausgeführt: ```python import.py```. Das Herunterladen und der Import in die Datenbank dauern eine Weile. Nach erfolgreichem Import sollten Sie in pgAdmin die beiden neuen Tabellen *wetterstation* und *wettermessung* sehen und mithilfe von SQL abfragen können.
 
