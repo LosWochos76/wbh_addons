@@ -26,8 +26,16 @@ services:
     container_name: influxdb
     ports:
       - "8086:8086"
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=wbh
+      - DOCKER_INFLUXDB_INIT_PASSWORD=secretsecret
+      - DOCKER_INFLUXDB_INIT_ORG=wbh
+      - DOCKER_INFLUXDB_INIT_BUCKET=wbh
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=tokentoken
     volumes:
       - influx-data:/var/lib/influxdb2
+      - influx-config:/etc/influxdb2
 
   grafana:
     image: grafana/grafana:latest
@@ -43,6 +51,7 @@ volumes:
   postgres-data:
   pgadmin-config:
   influx-data:
+  influx-config:
   grafana-data:
 
   
