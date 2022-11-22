@@ -18,7 +18,9 @@
 - ```conda install -c anaconda pandas```
 - ```conda install -c anaconda sqlalchemy```
 - ```conda install -c anaconda pywget```
-- ```conda install -c conda-forge psycopg2```<br><br>
+- ```conda install -c conda-forge psycopg2```
+- ```conda install -c conda-forge matplotlib```
+<br><br>
 Rückfragen können mit "y" (yes) beantwortet werden.
 
 9. Nun kann das eigentliche Import-Script gestartet werden. Dazu wird der folgende Befehl ausgeführt: ```python import.py```. Das Herunterladen und der Import in die Datenbank dauern eine Weile. Nach erfolgreichem Import sollten Sie in pgAdmin die beiden neuen Tabellen *wetterstation* und *wettermessung* sehen und mithilfe von SQL abfragen können.

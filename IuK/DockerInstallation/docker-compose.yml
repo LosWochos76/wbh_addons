@@ -44,6 +44,9 @@ services:
       - "3000:3000"
     links:
       - influxdb
+    environment:
+      - GF_SECURITY_ADMIN_USER=wbh
+      - GF_SECURITY_ADMIN_PASSWORD=secretsecret
     volumes:
       - grafana-data:/var/lib/grafana 
 
