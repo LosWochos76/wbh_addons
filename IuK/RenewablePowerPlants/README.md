@@ -15,9 +15,9 @@
 5. Sollte die Datei *import.py* eine Dateiendung *.txt* besitzen, müssen Sie die Datei noch umbenennen. Die geschieht über den folgenden Befehl: ```ren import.py.txt import.py```
 
 6. Nun müssen einige Python-Pakete installiert werden. Dazu müssen die folgenden Befehle eingegeben werden (die Reihenfolge ist dabei unwichtig):
-- ```conda install pandas```
-- ```conda install sqlalchemy```
-- ```conda install -c conda-forge python-wget```
+- ```conda install -c anaconda pandas```
+- ```conda install -c anaconda sqlalchemy```
+- ```conda install -c anaconda pywget```
 - ```conda install -c conda-forge psycopg2```<br><br>
 Rückfragen können mit "y" (yes) beantwortet werden.
 
