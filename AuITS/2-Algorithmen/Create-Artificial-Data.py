@@ -12,7 +12,7 @@ trend = f(np.linspace(0, 20, rows))
 residuals = np.random.normal(0, 10, rows)
 
 df["data"] = season + trend + residuals
-df.to_csv('df.csv', index=False, decimal=',', sep=';')
+df.to_csv('komponenten.csv', index=False, decimal=',', sep=';')
 
 df.plot(x='timestamp', y='data')
 plt.show()
