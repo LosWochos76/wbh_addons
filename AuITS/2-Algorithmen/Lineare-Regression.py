@@ -4,6 +4,7 @@ from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import requests
 from sklearn.metrics import r2_score
+import numpy as np
 
 url = 'https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv'
 response = requests.get(url)
@@ -18,7 +19,7 @@ x = data.iloc[:, 1].values.reshape(-1, 1)
 y = data.iloc[:, 2].values
 
 # Create a linear regression model
-model = LinearRegression()
+model = LinearRegression(fit_intercept=True)
 
 # Fit the model to the data
 model.fit(x, y)
@@ -37,15 +38,15 @@ mse = mean_squared_error(y, predicted_y)
 r2 = r2_score(y, predicted_y)
 
 plt.scatter(x, y, color='blue', label='Tatsächliche Daten')
-#plt.plot(x, predicted_y, color='red', label='Regression')
+plt.plot(x, predicted_y, color='red', label='Regression')
 plt.xlabel('Körpergröße (Inch)')
 plt.ylabel('Gewicht (Pounds)')
-#plt.title('Linear Regression')
+plt.title('Lineare Regression')
 plt.legend()
 
 formula_text = f'y = {a:.2f}x + {b:.2f}'
-#plt.text(x.max() * 0.95, y.min() * 1.1, formula_text, color='black', fontsize=12)
-#plt.text(x.max() * 0.95, y.min() * 1.05, f'mse = {mse:.2f}', color='black', fontsize=12)
-#plt.text(x.max() * 0.95, y.min() * 1.0, f'r^2 = {r2:.2f}', color='black', fontsize=12)
+plt.text(x.max() * 0.95, y.min() * 1.1, formula_text, color='black', fontsize=12)
+plt.text(x.max() * 0.95, y.min() * 1.05, f'mse = {mse:.2f}', color='black', fontsize=12)
+plt.text(x.max() * 0.95, y.min() * 1.0, f'r^2 = {r2:.2f}', color='black', fontsize=12)
 
 plt.show()
