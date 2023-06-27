@@ -1,6 +1,7 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
 import os.path
+from statsmodels.tsa.seasonal import seasonal_decompose
 
 # Run the Script 'Create-Artificial-Data.py' first:
 if not os.path.isfile('komponenten.csv'):
@@ -10,7 +11,8 @@ if not os.path.isfile('komponenten.csv'):
 df = pd.read_csv('komponenten.csv', delimiter=";", decimal=",")
 df['timestamp'] = pd.to_datetime(df['timestamp'])
 
-df["ma"] = df["data"] \
-    .rolling(window=24, center=True).mean()
-df.plot(x="timestamp", y=["data", "ma"])
+df = df.set_index("timestamp")
+result = seasonal_decompose(df, model='additive', period=24)
+
+result.plot()
 plt.show()
